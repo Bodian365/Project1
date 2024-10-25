@@ -19,7 +19,7 @@ Item.propTypes = {
   item: PropTypes.shape({
     img: PropTypes.string.isRequired,  
     title: PropTypes.string.isRequired, 
-    price: PropTypes.number.isRequired, 
+    price: PropTypes.string.isRequired, 
   }).isRequired, 
 };
 
