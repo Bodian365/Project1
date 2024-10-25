@@ -1,3 +1,5 @@
+
+
 const path = require('node:path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
@@ -15,7 +17,7 @@ const basicConfig = {
     rules: [
       {
         test: /\.css$/, 
-        use: 'css-loader'
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.(js|jsx)$/i,

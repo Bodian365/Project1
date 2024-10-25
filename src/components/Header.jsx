@@ -1,7 +1,5 @@
 import React from 'react'
-import { FaSearch } from "react-icons/fa";
-import { FaUser } from "react-icons/fa";
-import { FaShoppingCart } from "react-icons/fa";
+import { FaSearch , FaShoppingCart,FaUser  } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
 

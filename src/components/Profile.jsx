@@ -1,8 +1,9 @@
 import React from 'react'
 
+
 function Profile() {
   return (
-    <div>It's my profile</div>
+    <div>It&apos;s my profile</div>
   )
 }
 

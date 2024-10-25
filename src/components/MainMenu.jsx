@@ -1,10 +1,11 @@
 import React from 'react'
-import Items from './Items'
 import { Link } from 'react-router-dom';
 
+import Items from './Items'
+
 class MainMenu extends React.Component{
-  constructor(props){
-    super(props)
+  constructor(properties){
+    super(properties)
     this.state = {
         items:[
             {
@@ -81,8 +82,8 @@ class MainMenu extends React.Component{
             },  
             {
                 id:10,
-                title: 'FarCry5',
-                img: 'Farcry5.jpg',
+                title: 'FarCry6',
+                img: 'Farcry6.jpg',
                 desc: 'lorem ipsum',
                 category: 'Games',
                 price: '149'

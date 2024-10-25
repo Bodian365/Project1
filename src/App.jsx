@@ -1,12 +1,13 @@
-import React from 'react';
 import './App.css';
 
-import Header from './components/Header';
-import Footer from './components/Footer';
-import MainMenu from './components/MainMenu';
+import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Profile from './components/Profile';
+
+import Footer from './components/Footer';
 import Games from './components/Games';
+import Header from './components/Header';
+import MainMenu from './components/MainMenu';
+import Profile from './components/Profile';
 
 const App = () => {    
     return (
