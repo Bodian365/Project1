@@ -8,21 +8,13 @@ const config = {
     module: {
         rules: [
             {
-                test: /\.css$/i,
+                test: /\.css$/,
                 use: [
-                    MiniCssExtractPlugin.loader,
-                    {
-                        loader: "css-loader",
-                        options: {
-                            modules: {
-                                mode: 'local',
-                                localIdentName: '[name]__[local]',
-                                // namedExport: true, case 1;
-                                namedExport: false,
-                            },
-                        }
-                    },],
-            },
+                  MiniCssExtractPlugin.loader,
+                  'css-loader'
+                ]
+            }
+              
         ],
     },
 };
