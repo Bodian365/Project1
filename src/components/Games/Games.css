@@ -1,0 +1,28 @@
+.games-style{
+    margin-right: -10px;
+    margin-left: -10px; 
+} 
+
+
+.main .item{
+    width: 100px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    justify-content: space-between;
+}
+
+
+
+.games-style .item {
+    width: 200px; 
+    padding: 20px 30px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    text-align: center;
+}

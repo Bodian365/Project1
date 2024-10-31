@@ -1,0 +1,104 @@
+.game-container {
+    
+    margin: 0 -10px;
+    padding: 20px 70px;
+    background-color: #fff;
+}
+
+.product-details {
+    display: flex;
+    margin-top: 30px;
+}
+
+.game-img {
+    width: 450px;
+}
+
+.product-info {
+    margin-left: 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-name {
+    font-size: 60px;
+    margin-top: -9px;
+}
+
+.feedback{
+    margin: 10px 0px;
+    margin-top: -30px;
+    
+}
+
+.stars{
+    color: #FFCF02;
+    margin-right: 2px;
+    font-size: 18px;
+}
+
+.feedback-item{
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.availability {
+    font-size: 25px;
+    color: green;
+    margin-bottom: 10px;
+}
+
+label {
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+#rental-days {
+    width: 250px;
+    height: 30px;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.price-box {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    padding: 20px;
+    text-align: center;
+    border-radius: 19px;
+    margin-top: 80px;
+}
+
+.game-price {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.add-to-cart-btn {
+    background-color: #1ad;
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    width: 35%;
+    text-align: center;
+    border-radius: 9px;
+    font-size: 25px;
+}
+
+.about-game{
+    margin-top: 50px;
+}
+
+.about-game-title{
+    color: #706F6F;
+    font-size: 25px;
+}
+
+
+
