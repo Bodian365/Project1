@@ -1,21 +1,24 @@
+/* eslint-disable react/prop-types */
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import { FaTrash } from 'react-icons/fa';
 
-export class Item extends Component {
+export class Order extends Component {
     render() {
         return (
-            <div className="item">
+            <div className="shop-cart-item">
                 <img src={'./img/' + this.props.item.img} alt={this.props.item.name} />
                 <h3>{this.props.item.name}</h3>
-                <b>від {this.props.item.price}₴/день</b>
-                <p>{this.props.item.title}</p>
+                <b>{this.props.item.price}₴/день</b>
+                <FaTrash className="delete-icon" onClick={() => this.props.onDelete(this.props.item.id)} />
             </div>
         );
     }
 }
 
-Item.propTypes = {
+Order.propTypes = {
     item: PropTypes.shape({
+        id: PropTypes.number.isRequired,
         img: PropTypes.string.isRequired,
         name: PropTypes.string.isRequired,
         price: PropTypes.string.isRequired,
@@ -23,4 +26,4 @@ Item.propTypes = {
     }).isRequired,
 };
 
-export default Item;
+export default Order;

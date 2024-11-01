@@ -91,6 +91,10 @@ label {
     font-size: 25px;
 }
 
+.add-to-cart-btn:hover{
+    background-color: rgba(17, 170, 221, 0.733);
+}
+
 .about-game{
     margin-top: 50px;
 }

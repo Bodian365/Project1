@@ -7,7 +7,7 @@ import AboutUs from './components/AboutUs/AboutUs';
 import Contacts from './components/Contacts/Contacts';
 import Delivery from './components/Delivery/Delivery';
 import Footer from './components/Footer/Footer';
-import Game from './components/Game/Game';
+import GameWithParameters from './components/Game/GameWithParameters';
 import Games from './components/Games/Games';
 import Header from './components/Header/Header';
 import MainMenu from './components/MainMenu/MainMenu';
@@ -21,6 +21,7 @@ class App extends React.Component {
     constructor(properties) {
         super(properties);
         this.state = {
+            orders: [],
             items: [
                 {
                     id: 1,
@@ -225,17 +226,22 @@ class App extends React.Component {
                 },
             ],
         };
+        this.addToOrder = this.addToOrder.bind(this);
+        this.deleteOrder = this.deleteOrder.bind(this);
     }
     render() {
         return (
             <div>
                 <HashRouter>
-                    <Header />
+                    <Header orders={this.state.orders} onDelete={this.deleteOrder} />
                     <Routes>
                         <Route path="/games" element={<Games />} />
                         <Route path="/profile" element={<Profile />} />
                         <Route path="/" element={<MainMenu />} />
-                        <Route path="/game/:elementId" element={<Game items={this.state.items} />} />
+                        <Route
+                            path="/game/:elementId"
+                            element={<GameWithParameters onAdd={this.addToOrder} items={this.state.items} />}
+                        />
                         <Route path="/mainmenu" element={<MainMenu />} />
                         <Route path="/contacts" element={<Contacts />} />
                         <Route path="/aboutus" element={<AboutUs />} />
@@ -249,6 +255,19 @@ class App extends React.Component {
                 </HashRouter>
             </div>
         );
+    }
+
+    deleteOrder(id) {
+        this.setState({ orders: this.state.orders.filter((element) => element.id !== id) });
+    }
+
+    addToOrder(item) {
+        let isInArray = false;
+
+        for (const element of this.state.orders) {
+            if (element.id === item.id) isInArray = true;
+        }
+        if (!isInArray) this.setState({ orders: [...this.state.orders, item] });
     }
 }
 export default App;

@@ -44,6 +44,7 @@ header a:hover{
 
 
 header .header-main{
+    position: relative;
     background-color: #fff;
     margin: 0px -10px;
     margin-top: 30px;
@@ -62,12 +63,15 @@ header .logo:hover{
     text-decoration: underline;
 }
 
-
+.search-form{
+    width: 25%;
+    display: inline;
+    margin-left: 20%;
+}
 
 header .search{
-   margin-left: 220px;
    height: 35px;
-   width: 450px;
+   width: 23%;
    border-top-left-radius: 20px;
    border-bottom-left-radius: 20px;
    padding-left: 20px;
@@ -78,7 +82,7 @@ header .search-button{
     padding-top: 5px;
     background-color: #1D71B8;
     height: 40px;
-    width: 40px;
+    width: 2.5%;
     color: #fff;
     border: #1D71B8;
     border-radius: 1px;
@@ -97,6 +101,9 @@ header .nav-item{
     color: #808080;
 }
 
+header .nav-item:hover{
+    color: rgb(0, 0, 0);
+}
 
 header ul.nav li{
     display: inline;
@@ -106,7 +113,82 @@ header ul.nav li{
     font-size: 35px;
 }
 
+.shop-cart-button{
+    color: #808080;
+    margin-left: 25px;
+    cursor: pointer;
+    transition: opacity 500ms ease;
+    font-size: 35px;
+}
 
-header .nav-item:hover{
-    color: rgb(151, 151, 151);
+.shop-cart-button:hover,
+.shop-cart-button.active{
+    color: rgb(0, 0, 0);
+}
+
+.shop-cart{
+    position: absolute;
+    top: 70px;
+    right: 80px;
+    width: 450px;
+    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 0;
+    background: #fafafa;
+    box-shadow: 7px 6px 14px 0px rgba(104,101,101,0.84);
+    -webkit-box-shadow: 7px 6px 14px 0px rgba(104,101,101,0.84);
+    -moz-box-shadow: 7px 6px 14px 0px rgba(104,101,101,0.84);
+    z-index: 1000;
+}
+
+.shop-cart .shop-cart-item{
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+}
+
+.shop-cart .empty{
+    font-size: 15px;
+    margin-bottom: 20px;
+    margin-top: -20px;
+}
+
+.shop-cart .shop-cart-item img{
+    /* height: 100px; */
+    width: 85px;
+    float: left;
+    margin-right: 20px;
+}
+
+.shop-cart .shop-cart-item h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.shop-cart .shop-cart-item b{
+    color: #797979;
+    font-weight: 600;
+}
+
+.shop-cart-item .delete-icon{
+    color: #ca5252;
+    float: right;
+    position: relative;
+    top: -22px;
+    right: 13px;
+    cursor: pointer;
+    transition: color, transform 500ms ease;
+}
+
+.shop-cart-item .delete-icon:hover{
+     color: #d83030;
+     transform: scale(1.5);  
+}
+
+.shop-cart .summa{
+    float: left;
+    width: 100%;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
 }
