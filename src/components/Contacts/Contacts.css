@@ -23,7 +23,7 @@ h1{
 }
 
 .map{
-    background: url('/public/img/map.png') no-repeat;
+    background: url('/src/img/map.png') no-repeat;
     background-size: cover;
     width: 70%;
     padding-top: 33.5%; 

@@ -1,5 +1,6 @@
 const path = require('node:path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin'); // Імпортуємо CopyWebpackPlugin
 
 const basicConfig = {
   mode: 'development',
@@ -11,6 +12,14 @@ const basicConfig = {
   plugins: [
     new HtmlWebPackPlugin({
       template: path.resolve(__dirname, '../templates/index.html'),
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, '../public/img'), // Змініть на шлях до папки з зображеннями
+          to: path.resolve(__dirname, '../dist/img'), // Куди копіювати
+        },
+      ],
     }),
   ],
   module: {
@@ -39,10 +48,6 @@ const basicConfig = {
       '@hooks': path.resolve(__dirname, '../src/hooks'),
     },
   },
-  resolveLoader: {
-    modules: [path.resolve(__dirname, 'node_modules')],
-  },
-  devtool: 'source-map',
   devServer: {
     port: 9000,
   },
