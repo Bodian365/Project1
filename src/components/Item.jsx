@@ -3,12 +3,20 @@ import React, { Component } from 'react';
 
 export class Item extends Component {
     render() {
+        const { item } = this.props;
+
         return (
             <div className="item">
-                <img src={'./img/' + this.props.item.img} alt={this.props.item.name} />
-                <h3>{this.props.item.name}</h3>
-                <b>від {this.props.item.price}₴/день</b>
-                <p>{this.props.item.title}</p>
+                {item ? (
+                    <>
+                        <img src={`./img/${item.img}`} alt={item.name} />
+                        <h3>{item.name}</h3>
+                        <b>від {item.price}₴/день</b>
+                        <p>{item.title}</p>
+                    </>
+                ) : (
+                    <p>Завантаження...</p>
+                )}
             </div>
         );
     }
@@ -18,7 +26,7 @@ Item.propTypes = {
     item: PropTypes.shape({
         img: PropTypes.string.isRequired,
         name: PropTypes.string.isRequired,
-        price: PropTypes.string.isRequired,
+        price: PropTypes.number.isRequired,
         title: PropTypes.string,
     }).isRequired,
 };

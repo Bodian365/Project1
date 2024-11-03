@@ -8,11 +8,15 @@ export class Items extends Component {
     render() {
         return (
             <main className="main">
-                {this.props.items.map((element) => (
-                    <Link to={`/game/${element.id}`} key={element.id}>
-                        <Item item={element} />
-                    </Link>
-                ))}
+                {Array.isArray(this.props.items) ? (
+                    this.props.items.map((element) => (
+                        <Link to={`/game/${element.id}`} key={element.id}>
+                            <Item item={element} />
+                        </Link>
+                    ))
+                ) : (
+                    <p>Немає доступних елементів для відображення.</p>
+                )}
             </main>
         );
     }

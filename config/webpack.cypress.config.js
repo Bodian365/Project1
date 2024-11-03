@@ -6,7 +6,7 @@ const config = {
     module: {
         rules: [
             {
-                test: /\.css$/i,
+                test: /.css$/i,
                 use: [
                     'style-loader',
                     {
@@ -14,7 +14,7 @@ const config = {
                         options: {
                             modules: {
                                 mode: 'local',
-                                localIdentName: `[name]_[local]--[hash:base64:5]`,
+                                localIdentName: '[name]_[local]--[hash:base64:5]',
                                 namedExport: false,
                             },
                         },
@@ -22,7 +22,7 @@ const config = {
                 ],
             },
             {
-                test: /\.jsx?$/,
+                test: /.jsx?$/,
                 use: [
                     {
                         loader: 'babel-loader',

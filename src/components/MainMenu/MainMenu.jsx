@@ -16,7 +16,7 @@ class MainMenu extends React.Component {
                     img: 'PlayStation5.jpg',
                     desc: 'lorem',
                     category: 'consoles',
-                    price: '299',
+                    price: 299,
                 },
                 {
                     id: 2,
@@ -24,7 +24,7 @@ class MainMenu extends React.Component {
                     img: 'PlayStation4.jpg',
                     desc: 'lorem',
                     category: 'consoles',
-                    price: '199',
+                    price: 199,
                 },
                 {
                     id: 3,
@@ -32,7 +32,7 @@ class MainMenu extends React.Component {
                     img: 'XboxOneS.jpg',
                     desc: 'lorem',
                     category: 'consoles',
-                    price: '199',
+                    price: 199,
                 },
                 {
                     id: 4,
@@ -40,7 +40,7 @@ class MainMenu extends React.Component {
                     img: 'XboxSeriesX.jpg',
                     desc: 'lorem',
                     category: 'consoles',
-                    price: '299',
+                    price: 299,
                 },
                 {
                     id: 5,
@@ -48,7 +48,7 @@ class MainMenu extends React.Component {
                     img: 'XboxSeriesS.jpg',
                     desc: 'lorem',
                     category: 'consoles',
-                    price: '299',
+                    price: 299,
                 },
                 {
                     id: 6,
@@ -56,7 +56,7 @@ class MainMenu extends React.Component {
                     img: 'Assassins-Creed-Odyssey.jpg',
                     desc: 'lorem ipsum',
                     category: 'Games',
-                    price: '149',
+                    price: 149,
                 },
                 {
                     id: 7,
@@ -64,7 +64,7 @@ class MainMenu extends React.Component {
                     img: 'Call-of-Duty2.jpg',
                     desc: 'lorem ipsum',
                     category: 'Games',
-                    price: '149',
+                    price: 149,
                 },
                 {
                     id: 8,
@@ -72,7 +72,7 @@ class MainMenu extends React.Component {
                     img: 'Dead-Rising4.jpg',
                     desc: 'lorem ipsum',
                     category: 'Games',
-                    price: '149',
+                    price: 149,
                 },
                 {
                     id: 9,
@@ -80,7 +80,7 @@ class MainMenu extends React.Component {
                     img: 'Detroit.jpg',
                     desc: 'lorem ipsum',
                     category: 'Games',
-                    price: '149',
+                    price: 149,
                 },
                 {
                     id: 10,
@@ -88,7 +88,7 @@ class MainMenu extends React.Component {
                     img: 'Farcry6.jpg',
                     desc: 'lorem ipsum',
                     category: 'Games',
-                    price: '149',
+                    price: 149,
                 },
                 {
                     id: 11,
@@ -96,7 +96,7 @@ class MainMenu extends React.Component {
                     img: 'FC-24.jpg',
                     desc: 'lorem ipsum',
                     category: 'Games',
-                    price: '149',
+                    price: 149,
                 },
                 {
                     id: 12,
@@ -104,7 +104,7 @@ class MainMenu extends React.Component {
                     img: 'Forza-Horizon5.jpg',
                     desc: 'lorem ipsum',
                     category: 'Games',
-                    price: '149',
+                    price: 149,
                 },
                 {
                     id: 13,
@@ -112,7 +112,7 @@ class MainMenu extends React.Component {
                     img: 'God-of-War.jpg',
                     desc: 'lorem ipsum',
                     category: 'Games',
-                    price: '149',
+                    price: 149,
                 },
                 {
                     id: 14,
@@ -120,7 +120,7 @@ class MainMenu extends React.Component {
                     img: 'Gran-Turismo7.jpg',
                     desc: 'lorem ipsum',
                     category: 'Games',
-                    price: '149',
+                    price: 149,
                 },
                 {
                     id: 15,
@@ -128,7 +128,7 @@ class MainMenu extends React.Component {
                     img: 'Grand-Theft-Auto5.jpg',
                     desc: 'lorem ipsum',
                     category: 'Games',
-                    price: '149',
+                    price: 149,
                 },
                 {
                     id: 16,
@@ -136,7 +136,7 @@ class MainMenu extends React.Component {
                     img: 'Hogwarts-Legacy.jpg',
                     desc: 'lorem ipsum',
                     category: 'Games',
-                    price: '149',
+                    price: 149,
                 },
                 {
                     id: 17,
@@ -144,7 +144,7 @@ class MainMenu extends React.Component {
                     img: 'Mafia3.jpg',
                     desc: 'lorem ipsum',
                     category: 'Games',
-                    price: '149',
+                    price: 149,
                 },
                 {
                     id: 18,
@@ -152,7 +152,7 @@ class MainMenu extends React.Component {
                     img: 'Overwatch.jpg',
                     desc: 'lorem ipsum',
                     category: 'Games',
-                    price: '149',
+                    price: 149,
                 },
                 {
                     id: 19,
@@ -160,7 +160,7 @@ class MainMenu extends React.Component {
                     img: 'Red-Dead-Redemption2.jpg',
                     desc: 'lorem ipsum',
                     category: 'Games',
-                    price: '149',
+                    price: 149,
                 },
                 {
                     id: 20,
@@ -168,7 +168,7 @@ class MainMenu extends React.Component {
                     img: 'Sekiro.jpg',
                     desc: 'lorem ipsum',
                     category: 'Games',
-                    price: '149',
+                    price: 149,
                 },
                 {
                     id: 21,
@@ -176,7 +176,7 @@ class MainMenu extends React.Component {
                     img: 'Spider-Man2.jpg',
                     desc: 'lorem ipsum',
                     category: 'Games',
-                    price: '149',
+                    price: 149,
                 },
                 {
                     id: 22,
@@ -184,7 +184,7 @@ class MainMenu extends React.Component {
                     img: 'Tekken8.jpg',
                     desc: 'lorem ipsum',
                     category: 'Games',
-                    price: '149',
+                    price: 149,
                 },
                 {
                     id: 23,
@@ -192,7 +192,7 @@ class MainMenu extends React.Component {
                     img: 'The-Last-of-us.jpg',
                     desc: 'lorem ipsum',
                     category: 'Games',
-                    price: '149',
+                    price: 149,
                 },
                 {
                     id: 24,
@@ -200,7 +200,7 @@ class MainMenu extends React.Component {
                     img: 'The-Sims4.jpg',
                     desc: 'lorem ipsum',
                     category: 'Games',
-                    price: '149',
+                    price: 149,
                 },
                 {
                     id: 25,
@@ -208,7 +208,7 @@ class MainMenu extends React.Component {
                     img: 'UFC5.jpg',
                     desc: 'lorem ipsum',
                     category: 'Games',
-                    price: '149',
+                    price: 149,
                 },
             ],
         };
