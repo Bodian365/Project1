@@ -1,38 +1,35 @@
-import './Profile.css'
+/* eslint-disable unicorn/no-null */
+/* eslint-disable no-unused-vars */
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
-import React from 'react'
-import { Link } from 'react-router-dom';
+import { useAuth } from '../../hooks/useAuth';
+import { removeUser } from '../../store/slices/userSlice';
 
+const Profile = () => {
+    const { isAuth, email } = useAuth();
 
+    const dispatch = useDispatch();
 
-function Profile() {
-  return (
-    <div>
-      <h1>Авторизація</h1>
-      <div className='profile-wrapper'>
-        
-        <form action=''>
-          <p>Телефон або email<span className='login-items'>*</span></p>
-          <div className='input-box'>
-            <input className='login-input' type='text' required />
-          </div>
-          <p>Пароль<span className='login-items'>*</span></p>
-          <div className='input-box'>
-            <input className='login-input' type='text' required />
-          </div>
-          <div className="forgot-password">
-            <a href='#'>Забули пароль?</a>
-          </div>
-          <div className="button-div">
-            <button type='submit' className='button'>Ввійти</button>
-          </div>
-          <div className="register">
-            <p>Ще немає акаунта? <Link className='links' to='/register'>Зареєструватися</Link></p>
-          </div>
-          </form>
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (!isAuth) {
+            navigate('/loginpage');
+        }
+    }, [isAuth, navigate]);
+
+    return isAuth ? (
+        <div className="profile-div">
+            <h6 className="profile-title">Вітаю!</h6>
+            <p className="profile-p">Це ваша сторінка профілю</p>
+            <div className="profile-img"></div>
+            <button className="profile-button" onClick={() => dispatch(removeUser())}>
+                Вийти з акаунта {email}
+            </button>
         </div>
-    </div>
-  )
-}
+    ) : null;
+};
 
 export default Profile;

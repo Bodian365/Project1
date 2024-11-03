@@ -1,7 +1,10 @@
+/* eslint-disable react/prop-types */
 import './App.css';
+import './firebase';
 
 import React from 'react';
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { createHashRouter, Outlet, RouterProvider } from 'react-router-dom';
 
 import AboutUs from './components/AboutUs/AboutUs';
 import Contacts from './components/Contacts/Contacts';
@@ -12,10 +15,12 @@ import Games from './components/Games/Games';
 import Header from './components/Header/Header';
 import MainMenu from './components/MainMenu/MainMenu';
 import Payment from './components/Payment/Payment';
+import LoginPage from './components/Profile/LoginPage';
 import Profile from './components/Profile/Profile';
 import Refund from './components/Refund/Refund';
 import Register from './components/Register/Register';
 import Rules from './components/Rules/Rules';
+import { store } from './store';
 
 class App extends React.Component {
     constructor(properties) {
@@ -229,31 +234,37 @@ class App extends React.Component {
         this.addToOrder = this.addToOrder.bind(this);
         this.deleteOrder = this.deleteOrder.bind(this);
     }
+
     render() {
+        const router = createHashRouter([
+            {
+                path: '/',
+                element: <Layout orders={this.state.orders} onDelete={this.deleteOrder} />,
+                children: [
+                    { path: 'games', element: <Games /> },
+                    { path: 'profile', element: <Profile /> },
+                    { path: 'loginpage', element: <LoginPage /> },
+                    { path: '', element: <MainMenu /> },
+                    {
+                        path: 'game/:elementId',
+                        element: <GameWithParameters onAdd={this.addToOrder} items={this.state.items} />,
+                    },
+                    { path: 'mainmenu', element: <MainMenu /> },
+                    { path: 'contacts', element: <Contacts /> },
+                    { path: 'aboutus', element: <AboutUs /> },
+                    { path: 'rules', element: <Rules /> },
+                    { path: 'delivery', element: <Delivery /> },
+                    { path: 'payment', element: <Payment /> },
+                    { path: 'refund', element: <Refund /> },
+                    { path: 'register', element: <Register /> },
+                ],
+            },
+        ]);
+
         return (
-            <div>
-                <HashRouter>
-                    <Header orders={this.state.orders} onDelete={this.deleteOrder} />
-                    <Routes>
-                        <Route path="/games" element={<Games />} />
-                        <Route path="/profile" element={<Profile />} />
-                        <Route path="/" element={<MainMenu />} />
-                        <Route
-                            path="/game/:elementId"
-                            element={<GameWithParameters onAdd={this.addToOrder} items={this.state.items} />}
-                        />
-                        <Route path="/mainmenu" element={<MainMenu />} />
-                        <Route path="/contacts" element={<Contacts />} />
-                        <Route path="/aboutus" element={<AboutUs />} />
-                        <Route path="/rules" element={<Rules />} />
-                        <Route path="/delivery" element={<Delivery />} />
-                        <Route path="/payment" element={<Payment />} />
-                        <Route path="/refund" element={<Refund />} />
-                        <Route path="/register" element={<Register />} />
-                    </Routes>
-                    <Footer />
-                </HashRouter>
-            </div>
+            <Provider store={store}>
+                <RouterProvider router={router} />
+            </Provider>
         );
     }
 
@@ -270,4 +281,13 @@ class App extends React.Component {
         if (!isInArray) this.setState({ orders: [...this.state.orders, item] });
     }
 }
+
+const Layout = ({ orders, onDelete }) => (
+    <div>
+        <Header orders={orders} onDelete={onDelete} />
+        <Outlet />
+        <Footer />
+    </div>
+);
+
 export default App;

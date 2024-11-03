@@ -69,7 +69,7 @@ header .logo:hover{
     margin-left: 20%;
 }
 
-header .search{
+.search{
    height: 35px;
    width: 23%;
    border-top-left-radius: 20px;
@@ -78,7 +78,7 @@ header .search{
    font-size: 20px;
 }
 
-header .search-button{
+.search-button{
     padding-top: 5px;
     background-color: #1D71B8;
     height: 40px;
@@ -97,11 +97,11 @@ header ul.nav{
     list-style: none;
 }
 
-header .nav-item{
+.nav-item{
     color: #808080;
 }
 
-header .nav-item:hover{
+.nav-item:hover{
     color: rgb(0, 0, 0);
 }
 
